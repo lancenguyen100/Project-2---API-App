@@ -63,3 +63,13 @@ CRUD Actions - CREATE - READ - UPDATE - DELETE
         - type: String
         - require: String
     
+
+![Wireframes](images/wireframes/IMG_3114.jpg)
+![Wireframes](images/wireframes/IMG_3115.jpg)
+![Wireframes](images/wireframes/IMG_3116.jpg)
+![Wireframes](images/wireframes/IMG_3117.jpg)
+![Wireframes](images/wireframes/IMG_3118.jpg)
+![Wireframes](images/wireframes/IMG_3119.jpg)
+![Wireframes](images/wireframes/IMG_3120.jpg)
+![Wireframes](images/wireframes/IMG_3121.jpg)
+![ERD](images/ERD/IMG_3122.jpg)
