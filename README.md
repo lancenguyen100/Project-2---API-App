@@ -52,3 +52,14 @@ CRUD Actions - CREATE - READ - UPDATE - DELETE
     - be able to sort mountains by regions
     - be able to sort mountains by resort
     - be able to like a resort
+
+- Data
+    - Mountain
+        - name: String
+        - location: String
+        - Elevation: String
+        - Wind: Number
+    - Comment
+        - type: String
+        - require: String
+    
