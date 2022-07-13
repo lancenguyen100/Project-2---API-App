@@ -1,0 +1,21 @@
+body {
+    background-color: navajowhite;
+}
+
+.card {
+    margin: 7px;
+}
+
+a {
+    margin: 7px;
+}
+.container-md {
+text-align: center;
+margin-top: 30px;
+}
+
+.btn {
+    margin-top: 8px;
+    margin-left: 80px;
+}
+
