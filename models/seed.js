@@ -14,16 +14,16 @@ db.on("open", () => {
     const newMountains = [
         //mountain name:
         //mountain location:
-        {name:"Beech Mountain", location:"North Carolina",},
-        {name:"Sugar Mountain", location:"North Carolina"},
-        {name:"Ober Gatlinburg", location:"Tennessee"},
-        {name:"Keystone", location:"Colorado"},
-        {name:"Breckenridge", location:"Colorado"},
-        {name:"Vail", location:"Colorado"},
-        {name:"Bromley Mountain", location:"Vermont"},
-        {name:"Killington", location:"Vermont"},
-        {name:"Powder Mountain", location:"Utah"},
-        {name:"Solitude Mountain", location:"Utah"}
+        {name:"Beech Mountain", location:"North Carolina", elevation: "5,506 feet"},
+        {name:"Sugar Mountain", location:"North Carolina", elevation: "4,432 feet"},
+        {name:"Ober Gatlinburg", location:"Tennessee", elevation: "3000 feet"},
+        {name:"Keystone", location:"Colorado", elevation: "10,804"},
+        {name:"Breckenridge", location:"Colorado", elevation: "9,600 feet"},
+        {name:"Vail", location:"Colorado", elevation: "8,150 feet"},
+        {name:"Bromley Mountain", location:"Vermont", elevation: "3,281"},
+        {name:"Killington", location:"Vermont", elevation: "1,841"},
+        {name:"Powder Mountain", location:"Utah", elevation: "7,700"},
+        {name:"Solitude Mountain", location:"Utah", elevation: "10,488"}
     ]
 
 // when we seed data, we usually clear out the db first

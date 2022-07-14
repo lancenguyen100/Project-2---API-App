@@ -1,29 +1,33 @@
 {% layout 'layout.liquid' %}
 {% block content %}
-
 <div class="container-md">
     <form action="/users/signup" method="POST">
         <fieldset>
-            <legend>Welcome! Create an Account!</legend>
-            <label class="form-label">Username:</label>
+            <legend><strong>Welcome! Create an Account!</strong></legend>
+            <label class="form-label"><strong>Username:</strong></label>
             <input 
-                type="text" 
-                name="username" 
-                class="form-control-lg"
+            type="text" 
+            name="username" 
+            class="form-control-lg"
             >
-            <label class="form-label">Password:</label>
+            <label class="form-label"><strong>Password:</strong></label>
             <input 
-                type="password" 
-                name="password" 
-                class="form-control-lg"
+            type="password" 
+            name="password" 
+            class="form-control-lg"
             >
         </fieldset>
         <input 
-            type="submit" 
-            value="Create Account" 
-            class="btn btn-success"
+        type="submit" 
+        value="Create Account" 
+        class="btn btn-success"
         >
     </form>
 </div>
-
+<img src="https://s4893.pcdn.co/wp-content/uploads/2015/03/11055441_1579794988971000_1621492871_n.jpg" height="70%" width="70%" alt="snowboard slope">
+<style>
+    img {
+        margin-top: 10px;
+    }
+</style>
 {% endblock %} 

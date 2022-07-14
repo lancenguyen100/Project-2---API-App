@@ -24,15 +24,6 @@ const Mountain = require("../models/mountain")
 /////////////////////////////////////////////////////
 // GET - INDEX
 // localhost:3000/mountains
-
-
-//////////////////////////////////////////////
-// GET - MINE
-// might or might not use
-
-
-// GET - SHOW
-// localhost:3000/mountains/:id
 router.get("/", (req,res) => {
     // mongoose to find all mountains
     Mountain.find({})
@@ -44,6 +35,15 @@ router.get("/", (req,res) => {
             res.json(err)
         })
 })
+
+
+//////////////////////////////////////////////
+// GET - MINE
+// might or might not use
+
+
+// GET - SHOW
+// localhost:3000/mountains/:id
 
 
 

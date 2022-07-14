@@ -4,18 +4,18 @@
 <div class="container-md">
     <form action="/users/login" method="POST">
         <fieldset>
-            <legend>Welcome back, please log in here!</legend>
-            <label class="form-label">Username:</label>
+            <legend><strong>Yo! Please log in here!</strong></legend>
+            <label class="form-label"><strong>Username:</strong></label>
             <input 
                 type="text" 
                 name="username" 
-                class="form-control"
+                class="form-control-lg"
             >
-            <label class="form-label">Password:</label>
+            <label class="form-label"><strong>Password:</strong></label>
             <input 
                 type="password" 
                 name="password" 
-                class="form-control"
+                class="form-control-lg"
             >
         </fieldset>
         <input 
@@ -25,5 +25,14 @@
         >
     </form>
 </div>
-
+<img src="https://i.gifer.com/origin/1f/1fbb8ea32deb93cc5b8f8d459a3283e0_w200.webp" height="700" width="700" alt="snowboard gif">
+<style>
+    img {
+        margin-top: 10px;
+    }
+    body {
+        background-color: whitesmoke;
+        background-image: cover;
+    }
+    </style>
 {% endblock %} 
