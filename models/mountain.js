@@ -12,6 +12,18 @@ const mountainSchema = new Schema({
         type: String,
         required: true
     },
+    elevation: String,
+    description: String,
+    img: String,
+    activity: String,
+    numberOfLift: {
+        type: Number,
+        minimun: 0
+    },
+    numberOfRun: {
+        type: Number,
+        minimun: 0
+    }
 },
 {
     timestamps: true

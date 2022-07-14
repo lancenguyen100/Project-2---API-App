@@ -1,7 +1,7 @@
 {% layout 'layout.liquid' %}
 {% block content %}
 <div class="container-md">
-    <form action="/users/signup" method="POST">
+    <form id="signup" action="/users/signup" method="POST">
         <fieldset>
             <legend><strong>Welcome! Create an Account!</strong></legend>
             <label class="form-label"><strong>Username:</strong></label>
@@ -24,10 +24,23 @@
         >
     </form>
 </div>
-<img src="https://s4893.pcdn.co/wp-content/uploads/2015/03/11055441_1579794988971000_1621492871_n.jpg" height="70%" width="70%" alt="snowboard slope">
+<img src="https://s4893.pcdn.co/wp-content/uploads/2015/03/11055441_1579794988971000_1621492871_n.jpg" height="80%" width="80%" alt="snowboard slope">
 <style>
+    .container-md {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    #signup {
+        position: absolute;
+        margin-right: 30px;
+        margin-top: 35%;
+        /* top: 50%;
+        left: 50%; */
+        /* transform: translate(-50%, -50%); */
+    }
     img {
-        margin-top: 10px;
+        margin-top: 60px;
     }
 </style>
 {% endblock %} 

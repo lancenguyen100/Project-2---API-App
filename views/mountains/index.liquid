@@ -2,12 +2,12 @@
 
 {% block content %}
 <div>
-    <h2 class="display-6">All Mountains</h2>
+    <h2 class="display-6"><b><u>All Mountains</u></b></h2>
     <div class="row">
 
         {% for mountain in mountains %}
             <div class="card" style="width: 18rem">
-                <h5 class="card-header">{{mountain.name}}</h5>
+                <h5 class="card-header"><b>{{mountain.name}}</b></h5>
                 <div class="card-body">
                     <!-- <h6 class="card-title">
                         {% if fruit.readyToEat %}
@@ -19,11 +19,16 @@
                     <p class="card-text">
                         Location: {{mountain.location}} 
                     </p>
-
-                    <a href="/fruits/{{fruit._id}}" class="btn btn-info">View {{fruit.name}}</a>
+                    
+                    <a href="/mountains/{{mountain._id}}" class="btn btn-info">Enter {{mountain.name}}</a>
                 </div>
             </div>
         {% endfor %}
     </div>
 </div>
+<style>
+    body {
+        background-color: blanchedalmond;
+    }
+</style>
 {% endblock %} 

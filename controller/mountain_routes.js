@@ -44,7 +44,17 @@ router.get("/", (req,res) => {
 
 // GET - SHOW
 // localhost:3000/mountains/:id
+router.get("/:id", (req, res) => {
+    const mountainId = req.params.id
 
+    Mountain.findById(mountainId)
+    .then(mountain => {
+        res.render("mountains/show", { mountain })
+    })
+    .catch(err => {
+        res.json(err)
+    })
+})
 
 
 
