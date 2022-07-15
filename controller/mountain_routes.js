@@ -10,10 +10,22 @@ const Mountain = require("../models/mountain")
 
 /////////////////////////////////////////////////
 // GET ROUTE FOR DISPLAYING AN UPDATE FORM
+// need this before edit route
+router.get("/:id/edit", (req, res) => {
+    const mountainId = req.params.id
+
+    Mountain.findById(mountainId)
+        .then(mountain => {
+            res.render("mountains/edit", { mountain })
+        })
+        .catch(err => {
+            res.json(err)
+        })
+})
 
 //////////////////////////////////////////////
 // PUT - UPDATE
-// localhost:3000/mountains/:id
+// localhost:5000/mountains/:id
 
 
 ////////////////////////////////////////////////////
@@ -43,7 +55,7 @@ router.post("/", (req, res) => {
 
 /////////////////////////////////////////////////////
 // GET - INDEX
-// localhost:3000/mountains
+// localhost:5000/mountains
 router.get("/", (req,res) => {
     // mongoose to find all mountains
     Mountain.find({})
@@ -63,7 +75,7 @@ router.get("/", (req,res) => {
 
 
 // GET - SHOW
-// localhost:3000/mountains/:id
+// localhost:5000/mountains/:id
 router.get("/:id", (req, res) => {
     const mountainId = req.params.id
 

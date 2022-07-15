@@ -1,0 +1,74 @@
+{% layout 'layout.liquid' %}
+
+{% block content %}
+<div class="container-md">
+    <form action="/mountains/{{mountain._id}}?_method=PUT" method="POST">
+        <fieldset>
+            <legend>Edit {{mountain.name}}</legend>
+            <label class="form-label">Name:</label>
+            <input
+                class="form-control"
+                type="text"
+                name="name"
+                placeholder="enter name"
+                >
+            <label class="form-label">Image:</label>
+            <input
+                class="form-control"
+                type="image"
+                name="image"
+                placeholder="upload image"
+                >
+            <label class="form-label">Location:</label>
+            <input
+                class="form-control"
+                type="text"
+                name="location"
+                placeholder="enter location"
+                >
+            <label class="form-label">Elevation:</label>
+            <input
+                class="form-control"
+                type="text"
+                name="elevation"
+                placeholder="enter elevation"
+                >
+            <label class="form-label">Description:</label>
+            <input
+                class="form-control"
+                type="text"
+                name="description"
+                placeholder="enter description"
+                >
+            <label class="form-label">Activities:</label>
+            <input
+                class="form-control"
+                type="text"
+                name="activities"
+                placeholder="enter activities"
+                >
+            <label class="form-label">Number of Lifts:</label>
+            <input
+                class="form-control"
+                type="number" min="0"
+                name="numberOfLift"
+                placeholder="enter numberOfLift"
+                >
+            <label class="form-label">Number of Slopes/Runs:</label>
+            <input
+                class="form-control"
+                type="number" min="0"
+                name="numberOfRun"
+                placeholder="enter numberOfRun"
+                >
+        </fieldset>
+        <div class="btn-group">
+            <input type="submit"
+            value="Edit {{mountain.name}}"
+            class="btn btn-success">
+            <a href="/mountains" class="btn btn-warning">Hey! Are you sure?</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %} 

@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Welcome to {{mountain.name}}!</h1>
-<div><img src="{{mountain.img}}" width="300" height="300"></div>
+<div><img src="{{mountain.img}}" width="300" height="300">
 <ul>
     <li>
         <b>Location:</b> {{mountain.location}}
@@ -23,7 +23,11 @@
        <b>Number of Trails/Slopes:</b> {{mountain.numberOfRun}}
     </li>
 </ul>
+
+<a href="/mountains/{{mountain._id}}/edit" class="btn btn-secondary">Edit Mountain</a>
+
 <button><a href="/mountains/">Back to Mountains</button>
+</div>
 <style>
     ul {
         list-style: none;
