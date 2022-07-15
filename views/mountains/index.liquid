@@ -17,7 +17,7 @@
                         {% endif %}
                     </h6> -->
                     <p class="card-text">
-                        Location: {{mountain.location}} 
+                        <em>Location:</em> <b>{{mountain.location}}</b> 
                     </p>
                     
                     <a href="/mountains/{{mountain._id}}" class="btn btn-info">Enter {{mountain.name}}</a>
@@ -28,6 +28,12 @@
 </div>
 <style>
     body {
+        background-color: lightskyblue;
+    }
+    .card-body {
+        background-color: gainsboro;
+    }
+    .btn {
         background-color: blanchedalmond;
     }
 </style>

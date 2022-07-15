@@ -1,5 +1,35 @@
 {% layout 'layout.liquid' %}
 
 {% block content %}
-<p><img src="{{mountain.img}}" width="350" height="350"></p>
+<h1>Welcome to {{mountain.name}}!</h1>
+<div><img src="{{mountain.img}}" width="300" height="300"></div>
+<ul>
+    <li>
+        <b>Location:</b> {{mountain.location}}
+    </li>
+    <li>
+        <b>Elevation:</b> {{mountain.elevation}}
+    </li>
+    <li>
+        <b>Description of Mountain/Area:</b> {{mountain.description}}
+    </li>
+    <li>
+        <b>Activities to do:</b> {{mountain.activity}}
+    </li>
+    <li>
+        <b>Number of Lifts:</b> {{mountain.numberOfLift}}
+    </li>
+    <li>
+       <b>Number of Trails/Slopes:</b> {{mountain.numberOfRun}}
+    </li>
+</ul>
+<style>
+    ul {
+        list-style: none;
+        margin-top: 10px;
+    }
+    li {
+        margin: 5px;
+    }
+</style>
 {% endblock %} 

@@ -15,11 +15,31 @@ const Mountain = require("../models/mountain")
 // PUT - UPDATE
 // localhost:3000/mountains/:id
 
+
 ////////////////////////////////////////////////////
 // GET ROUTE FOR DISPLAYING MY FORM FOR CREATE
+// GET route for showing the form first
+// CANNOT create a moutain with a form first
+router.get("/new", (req, res) => {
+    res.render("mountains/new")
+})
 
 ///////////////////////////////////////////////////
 // POST - CREATE
+// Create route for posting new content
+router.post("/", (req, res) => {
+    
+    req.body.owner = req.session.userId
+
+    Mountain.create(req.body)
+        .then(mountain => {
+            console.log(mountain)
+            res.redirect("/mountains")
+        })
+        .catch(err => {
+            res.json(err)
+        })
+})
 
 /////////////////////////////////////////////////////
 // GET - INDEX
