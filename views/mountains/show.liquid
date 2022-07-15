@@ -3,6 +3,7 @@
 {% block content %}
 <h1>Welcome to {{mountain.name}}!</h1>
 <div><img src="{{mountain.img}}" width="300" height="300">
+<article>
 <ul>
     <li>
         <b>Location:</b> {{mountain.location}}
@@ -20,11 +21,17 @@
         <b>Number of Lifts:</b> {{mountain.numberOfLift}}
     </li>
     <li>
-       <b>Number of Trails/Slopes:</b> {{mountain.numberOfRun}}
+        <b>Number of Trails/Slopes:</b> {{mountain.numberOfRun}}
     </li>
 </ul>
-
-<a href="/mountains/{{mountain._id}}/edit" class="btn btn-secondary">Edit Mountain</a>
+    <div class="btn-group">
+        
+        <a href="/mountains/{{mountain._id}}/edit" class="btn btn-primary">Edit Mountain</a>
+        <form action="/mountains/{{mountain._id}}?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE" class="btn btn-danger">
+        </form>
+    </div>
+</article>
 
 <button><a href="/mountains/">Back to Mountains</button>
 </div>
