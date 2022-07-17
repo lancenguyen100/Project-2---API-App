@@ -22,8 +22,13 @@ const mountainSchema = new Schema({
     },
     numberOfRun: {
         type: Number,
-        minimun: 0
-    }
+        minimun: 0,
+    },
+    owner: {
+        type: Schema.Types.ObjectId, // reference single User ._id
+        reference: "User" // const User = model("User", userSchema) the string of "User" is how we reference model
+    },
+    comments: [commentSchema] // one mountain can have many comments. Comments are a sub document of Mountain
 },
 {
     timestamps: true

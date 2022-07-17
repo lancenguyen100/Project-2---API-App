@@ -32,7 +32,26 @@
         </form>
     </div>
 </article>
-
+<div class="col-md-6">
+    <form action="/comments/{{ mountain._id }}" method="POST">
+        <fieldset>
+            <legend>Add comment</legend>
+            <label class="form-label">Comment: </label>
+            <input type="text" class="form-control"
+            name="message" placeholder="Enter comment here"/>
+        </fieldset>
+        <input type="submit" class="btn btn-success" value="Add comment"/>
+    </form>
+</div>
+{% if mountain.comments.length > 0 %}
+<div class="container-sm justify-content-centered">
+    <div class="col-md-8 col-lg-6">
+        {% for comment in mountain.comments %}
+            {% render "../comment.liquid" comment: comment, userId: userId, mountain: mountain, username: username %}
+        {% endfor %}
+    </div>
+</div>
+    {% endif %}
 <button><a href="/mountains/">Back to Mountains</button>
 </div>
 <style>

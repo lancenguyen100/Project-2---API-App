@@ -6,7 +6,7 @@ const router = express.Router()
 const Mountain = require("../models/mountain")
 
 // POST - CREATE ROUTE FOR COMMENT
-// localhost:3000/comments/:mountainId <- A single fruit can have many comments
+// localhost:5000/comments/:mountainId <- A single fruit can have many comments
 router.post("/:mountainId", (req, res) => {
     const mountainId = req.params.mountainId
     req.body.author = req.session.userId
@@ -27,3 +27,31 @@ router.post("/:mountainId", (req, res) => {
         res.json(err)
     })
 })
+
+// DELETE ROUTE
+// DELETING A COMMENT OR COMMENTS
+// localhost:5000/comments/delete/:mountainID/:commId
+router.delete("/delete/:mountainId/:commentId", (req, res) => {
+    const mountainId = req.params.mountainId
+    const commentId = req.params.commentId
+
+    // locate a moutain by ID
+    Mountain.findById(mountainId)
+    // one mountain can have many comments
+    // find a comment by ID
+    .then(mountain => {
+        const comment = mountain.comments.id(commentId)
+        comment.remove()
+        // return and call .save
+        return mountain.save()
+    })
+    .then(moutain => {
+        res.redirect(`/mountains/${mountainId}`)
+    })
+    .catch(err => {
+        res.json(err)
+    })
+    // remove the comment
+})
+
+module.exports = router
