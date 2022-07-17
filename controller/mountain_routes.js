@@ -4,9 +4,21 @@ const router = express.Router()
 // import moutain model to access database
 const Mountain = require("../models/mountain")
 
+
 //////////////////////////////////
 // DELETE - DELETE
+// Delete by ID
+router.delete("/:id", (req, res) => {
+    const mountainId = req.params.id
 
+    Mountain.findByIdAndRemove(mountainId)
+        .then(mountain => {
+            res.redirect("/mountains")
+        })
+        .catch(err => {
+            res.json(err)
+        })
+})
 
 /////////////////////////////////////////////////
 // GET ROUTE FOR DISPLAYING AN UPDATE FORM
@@ -26,6 +38,18 @@ router.get("/:id/edit", (req, res) => {
 //////////////////////////////////////////////
 // PUT - UPDATE
 // localhost:5000/mountains/:id
+// Route to run updated mountains
+router.put("/:id", (req, res) => {
+    const mountainId = req.params.id
+
+    Mountain.findByIdAndUpdate(mountainId, req.body, { new: true})
+        .then (mountain => {
+            res.redirect(`/mountains/${mountain._id}`)
+        })
+        .catch(err => {
+            res.json(err)
+        })
+})
 
 
 ////////////////////////////////////////////////////
@@ -72,6 +96,18 @@ router.get("/", (req,res) => {
 //////////////////////////////////////////////
 // GET - MINE
 // might or might not use
+// Show users' personal favs
+router.get("/mine", (req, res) => {
+    // locate the specific mountains associated with current user
+    Mountain.find ({ owner: req.session.userId })
+        .then(mountains => {
+            res.render("mountains/index", { mountains})
+        })
+        .catch (err => {
+            console.log(err)
+            res.json({err})
+        })
+})
 
 
 // GET - SHOW

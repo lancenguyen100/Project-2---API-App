@@ -9,6 +9,8 @@ const methodOverride = require("method-override")
 // CONTROLLER ROUTES 
 const userRoutes = require("./controller/user_routes")
 const mountainRoutes = require("./controller/mountain_routes")
+const commentRoutes = require("./controller/comment_routes")
+
 // Create our express application object
 const app = require("liquid-express-views")(express())
 
@@ -40,6 +42,7 @@ app.use(
 //////// ROUTES ////////////
 app.use("/users", userRoutes)
 app.use("/mountains", mountainRoutes)
+app.use("/comments", commentRoutes)
 
 
 // localhost:5000/
