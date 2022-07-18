@@ -4,12 +4,12 @@ const mongoose = require("./connection")
 const commentSchema = new mongoose.Schema({
     message: {
         type: String,
-        require: true
+        required: true
     },
     author: {
         // Reference a SINGLE user
         type: mongoose.Schema.Types.ObjectId,
-        reference: "User" 
+        ref: "User" 
     }
 }, {
     timestamps: true    

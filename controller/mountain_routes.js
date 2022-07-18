@@ -116,8 +116,11 @@ router.get("/:id", (req, res) => {
     const mountainId = req.params.id
 
     Mountain.findById(mountainId)
+    .populate("comments.author")
     .then(mountain => {
-        res.render("mountains/show", { mountain })
+        const userId = req.session.userId
+        const username = req.session.username
+        res.render("mountains/show", { mountain, userId, username })
     })
     .catch(err => {
         res.json(err)

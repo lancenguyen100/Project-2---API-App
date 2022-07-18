@@ -2,7 +2,7 @@
 
 {% block content %}
 <div>
-    <h2 class="display-6"><b><u>All Mountains</u></b></h2>
+    <h2 class="display-6"><b><u>Mountains/Slopes</u></b></h2>
     <div class="row">
 
         {% for mountain in mountains %}
@@ -20,7 +20,7 @@
                         <em>Location:</em> <b>{{mountain.location}}</b> 
                     </p>
                     
-                    <a href="/mountains/{{mountain._id}}" class="btn btn-info">Enter {{mountain.name}}</a>
+                    <a href="/mountains/{{mountain._id}}" class="btn btn-info">Visit {{mountain.name}}</a>
                 </div>
             </div>
         {% endfor %}
