@@ -1,7 +1,7 @@
 {% layout 'layout.liquid' %}
 
 {% block content %}
-<h1>Welcome to {{mountain.name}}!</h1>
+<h1><b><u>Welcome to {{mountain.name}}!</u></b></h1>
 <div><img src="{{mountain.img}}" width="300" height="300">
 <article>
 <ul>
@@ -35,8 +35,8 @@
 <div class="col-md-6">
     <form action="/comments/{{ mountain._id }}" method="POST">
         <fieldset>
-            <legend>Add comment</legend>
-            <label class="form-label">Comment: </label>
+            <legend><u>Leave Your Mark!</u></legend>
+            <label class="form-label"></label>
             <input type="text" class="form-control"
             name="message" placeholder="Enter comment here"/>
         </fieldset>
@@ -61,6 +61,20 @@
     }
     li {
         margin: 5px;
+    }
+    .btn {
+        margin-left: 10px;
+    }
+    button {
+        margin-top: 70px;
+        
+    }
+    .col-md-6 {
+        margin-top: 50px;
+        margin-left: 25px;
+    }
+    .form-control {
+        margin-top: 25px;
     }
 </style>
 {% endblock %} 
