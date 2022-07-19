@@ -24,6 +24,10 @@ const mountainSchema = new Schema({
         type: Number,
         minimun: 0,
     },
+    favorite: {
+            type: Boolean,
+            default: false
+    },
     owner: {
         type: Schema.Types.ObjectId, // reference single User ._id
         reference: "User" // const User = model("User", userSchema) the string of "User" is how we reference model

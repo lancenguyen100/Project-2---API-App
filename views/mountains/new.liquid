@@ -4,20 +4,21 @@
 <div class="container-md">
     <form action="/mountains" method="POST">
         <fieldset>
-            <legend>Add A New Mountain</legend>
+            <legend><b><u>Add A New Mountain</u></b></legend>
             <label class="form-label">Name:</label>
             <input
                 class="form-control"
                 type="text"
                 name="name"
                 placeholder="enter name"
+                value="{{mountain.name}}"
                 >
             <label class="form-label">Image:</label>
             <input
                 class="form-control"
-                type="image"
-                name="image"
-                value="upload"
+                type="file"
+                name="img"
+                value="{{mountain.img}}"
                 >
             <label class="form-label">Location:</label>
             <input
@@ -25,6 +26,7 @@
                 type="text"
                 name="location"
                 placeholder="enter location"
+                value="{{mountain.location}}"
                 >
             <label class="form-label">Elevation:</label>
             <input
@@ -32,6 +34,7 @@
                 type="text"
                 name="elevation"
                 placeholder="enter elevation"
+                value="{{mountain.elevation}}"
                 >
             <label class="form-label">Description:</label>
             <input
@@ -39,13 +42,15 @@
                 type="text"
                 name="description"
                 placeholder="enter description"
+                value="{{mountain.description}}"
                 >
-            <label class="form-label">Activities:</label>
+            <label class="form-label">Activities to do:</label>
             <input
                 class="form-control"
                 type="text"
-                name="activities"
+                name="activity"
                 placeholder="enter activities"
+                value="{{mountain.activity}}"
                 >
             <label class="form-label">Number of Lifts:</label>
             <input
@@ -53,6 +58,7 @@
                 type="number" min="0"
                 name="numberOfLift"
                 placeholder="enter numberOfLift"
+                value="{{mountain.numberOfLift}}"
                 >
             <label class="form-label">Number of Slopes/Runs:</label>
             <input
@@ -60,6 +66,7 @@
                 type="number" min="0"
                 name="numberOfRun"
                 placeholder="enter numberOfRun"
+                value="{{mountain.numberOfRun}}"
                 >
         </fieldset>
         <input
@@ -69,4 +76,12 @@
         >
     </form>
 </div>
+<style>
+    input {
+        margin-block: 5px;
+    }
+    .form-label {
+    margin-block: 5px;
+    }
+</style>
 {% endblock %} 

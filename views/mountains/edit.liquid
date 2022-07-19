@@ -16,7 +16,7 @@
             <label class="form-label">Image:</label>
             <input
                 class="form-control"
-                type="image"
+                type="file"
                 name="image"
                 placeholder="upload image"
                 value="{{mountain.img}}"
@@ -74,9 +74,17 @@
             <input type="submit"
             value="Edit {{mountain.name}}"
             class="btn btn-success">
-            <a href="/mountains" class="btn btn-warning">Hey! Are you sure?</a>
+            <a href="/mountains" class="btn btn-warning">Take Me Back</a>
         </div>
     </form>
 </div>
+<style>
+    .btn-group {
+        margin-top: 20px;
+    }
+    .btn-success {
+        margin-left: 10px;
+    }
+</style>
 
 {% endblock %} 

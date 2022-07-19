@@ -6,6 +6,21 @@ const express = require("express")
 const morgan = require("morgan")
 const methodOverride = require("method-override")
 
+// //////Multer//////
+// const multer = require("multer")
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, "./uploads")
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, file.originalname)
+//     }
+// })
+// const upload = multer({ storage: storage})
+// app.use(express.static(_dirname + "/public"))
+// app.use("/uploads", express.static("upload"))
+// /////Multer/////////////
+
 // CONTROLLER ROUTES 
 const userRoutes = require("./controller/user_routes")
 const mountainRoutes = require("./controller/mountain_routes")
