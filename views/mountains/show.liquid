@@ -32,13 +32,89 @@
         </form>
     </div>
 </article>
-
-
-<div>
-    <form action="/mountains/{{mountain._id}}/favorites?_method=GET" method="POST">
-        <input type="submit" value="Add To My Mountains" class="btn btn-success">
+<!-- My add -->
+    <form action="/mountains" method="POST">
+        <fieldset>
+            <input
+            hidden
+            class="form-control"
+            type="text"
+            name="name"
+            placeholder="enter name"
+            value="{{mountain.name}}"
+            >
+            <input
+            hidden
+            class="form-control"
+            type="text"
+            name="img"
+            placeholder="enter name"
+            value="{{mountain.img}}"
+            >
+            <input
+            hidden
+            class="form-control"
+            type="text"
+            name="location"
+            placeholder="enter location"
+            value="{{mountain.location}}"
+            >
+            <input
+            hidden
+            class="form-control"
+            type="text"
+            name="elevation"
+            placeholder="enter elevation"
+            value="{{mountain.elevation}}"
+            >
+            <input
+            hidden
+            class="form-control"
+            type="text"
+            name="description"
+            placeholder="enter description"
+            value="{{mountain.description}}"
+            >
+            <input
+            hidden
+            class="form-control"
+            type="text"
+            name="activity"
+            placeholder="enter Activities"
+            value="{{mountain.activity}}"
+            >
+            <input
+            hidden
+            class="form-control"
+            type="text"
+            name="name"
+            placeholder="enter name"
+            value="{{mountain.name}}"
+            >
+            <input
+            hidden
+            class="form-control"
+            type="number" min="0"
+            name="numberOfLift"
+            placeholder="enter numberOfLift"
+            value="{{mountain.numberOfLift}}"
+            >
+            <input
+            hidden
+            class="form-control"
+            type="number" min="0"
+            name="numberOfRun"
+            placeholder="enter numberOfRun"
+            value="{{mountain.numberOfRun}}"
+            >
+        </fieldset>
+        <input
+        type="submit"
+        value="Add to My Mountains"
+        class="btn btn-success"
+        >
     </form>
-</div>
+<!-- End of my add -->
 
 <div class="col-md-6">
     <form action="/comments/{{ mountain._id }}" method="POST">
