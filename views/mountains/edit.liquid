@@ -16,9 +16,9 @@
             <label class="form-label">Image:</label>
             <input
                 class="form-control"
-                type="file"
-                name="image"
-                placeholder="upload image"
+                type="| img_url: 'medium'"
+                name="img"
+                placeholder="place url here"
                 value="{{mountain.img}}"
                 >
             <label class="form-label">Location:</label>
@@ -45,11 +45,11 @@
                 placeholder="enter description"
                 value="{{mountain.description}}"
                 >
-            <label class="form-label">Activities:</label>
+            <label class="form-label">Activities to do:</label>
             <input
                 class="form-control"
                 type="text"
-                name="activities"
+                name="activity"
                 placeholder="enter activities"
                 value="{{mountain.activity}}"
                 >

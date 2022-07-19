@@ -6,16 +6,10 @@
     <div class="row">
 
         {% for mountain in mountains %}
-            <div class="card" style="width: 18rem">
+            <div class="card" style="width: 16rem">
                 <h5 class="card-header"><b>{{mountain.name}}</b></h5>
                 <div class="card-body">
-                    <!-- <h6 class="card-title">
-                        {% if fruit.readyToEat %}
-                            Ripe
-                        {% else %}
-                            Not Ripe
-                        {% endif %}
-                    </h6> -->
+                    
                     <p class="card-text">
                         <em>Location:</em> <b>{{mountain.location}}</b> 
                     </p>
