@@ -63,7 +63,7 @@ app.use("/comments", commentRoutes)
 // localhost:5000/
 // Make sure server is running
 app.get("/", (req, res) => {
-    res.send("Yo! That's server is popping!")
+    // res.send("Yo! That's server is popping!")
     res.redirect("/mountains")
 })
 
@@ -72,10 +72,9 @@ app.get("/", (req, res) => {
 // Server Listener
 ////////////////////////////////////////////
 // const PORT = process.env.PORT
-
-app.listen(process.env.PORT || 3000)
-
-
 // , () => {
-//     console.log(`app is listening on port: ${PORT}`)
-// })
+    //     console.log(`app is listening on port: ${PORT}`)
+    // })
+
+
+    app.listen(process.env.PORT || 3000)
