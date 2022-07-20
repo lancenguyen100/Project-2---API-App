@@ -93,27 +93,6 @@ router.get("/", (req,res) => {
 })
 
 
-// // Favorite Routes
-// router.get("/:id/favorites", (req, res) => {
-//     console.log(req.params)
-//     const mountainId = req.params.id
-
-//     Mountain.findById(mountainId).toArray()
-//     Mountain.findById(mountainId).insert()
-
-//     .then(mountains => {
-//         console.log(mountains)
-//     })
-    
-// //     Mountain.insertOne(req.params.id)
-// //     .then(mountains => {
-// //         res.render("mountains/index", { mountains })
-// //     })
-// //     .catch(err => {
-// //         res.json(err)
-// //     })
-// })
-
 
 
 ////////////////////////////////////////////
