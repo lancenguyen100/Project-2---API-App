@@ -2,7 +2,7 @@
 require("dotenv").config()
 
 
-// // BROWSER OR HEROKU CONNECTION //
+// // // BROWSER OR HEROKU CONNECTION //
 // const mongoose = require('mongoose');
 
 // // Fire off the connection to Mongo DB
@@ -23,8 +23,8 @@ require("dotenv").config()
 
 ///////////////////////////////////////////////////////////////////////////////
 
-// // LOCAL CONNECTION //
-// // Getting mongoose to use
+// LOCAL CONNECTION //
+// Getting mongoose to use
 const mongoose = require("mongoose")
 
 const DATABASE_URI = process.env.DATABASE_URI
