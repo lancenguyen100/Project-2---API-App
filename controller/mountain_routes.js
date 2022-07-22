@@ -105,16 +105,16 @@ router.get("/", (req,res) => {
 
 
 
-
 ////////////////////////////////////////////
 // GET - MINE
 // might or might not use
 // Show users' personal favs
 router.get("/myMountains", (req, res) => {
     // locate the specific mountains associated with current user
+    const loggedIn = req.session.loggedIn
     Mountain.find ({ owner: req.session.userId })
         .then(mountains => {
-            res.render("mountains/index", { mountains })
+            res.render("mountains/index", { mountains, loggedIn })
         })
         .catch (err => {
             console.log(err)
